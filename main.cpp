@@ -10,7 +10,7 @@
 #define fPrefix "/"
 #endif
 
-#define     FILENAME    "sample.cpp"
+#define     __FILENAME__    0
 #define     XAN_new     new(__FILE__, __LINE__)
 #define     new         XAN_new
 
@@ -55,20 +55,22 @@ void printDebug(Node *head,
         printf("No malloc, new, free, or delete calls");
     }
     else {
+        int counter = 1;
         while(temp != nullptr) {
-            printf("%d-th memory modification:\n", malloc_counter + free_counter + new_counter + delete_counter);
+            printf("%d-th memory modification:\n", counter);
             printf("data alloc'd via malloc: %d\n", temp->getMemoryMallocSize());
             printf("data dealloc'd via free'd: %d\n", temp->getMemoryFreeSize());
             printf("data alloc'd via new: %d\n", temp->getMemoryNewSize());
             printf("data dealloc'd via delete: %d\n", temp->getMemoryDeleteSize());
-            printf("source: %s, line: %d\n", (temp->getFile()).c_str(), temp->getLine());
+            printf("source: %s, line: %d\n", temp->file, temp->getLine());
             temp = temp->next;
+            counter++;
         }
     }
 }
 
 void * XAN_malloc(size_t size,
-                  std::string file,
+                  char* file,
                   int line
 ) {
     Node *temp;
@@ -92,27 +94,29 @@ void * XAN_malloc(size_t size,
     }
     else {
         // if alloc failed
-        printf("Alloc failed at location: %s, line %d", file.c_str(), line);
+        printf("Alloc failed at location: %s, line %d", file, line);
         printDebug(temp, malloc_counter, free_counter, new_counter, delete_counter);
     }
     return ptr;
 }
 
 void * XAN_free(size_t size,
-                std::string file,
+                char * file,
                 int line
 ) {
 
 }
+// not working due to char *
 
-
-
+#define     malloc(_size)   XAN_malloc(_size, __FILENAME__, __LINE__)
 int main() {
+    malloc(10);
     std::cout << "Ben" << std::endl;
     return 0;
 }
 //change
+#define XAN_DEBUG_MODE
 #ifdef XAN_DEBUG_MODE // default c++ mode
-#define     malloc(_size)   XAN_malloc(size, FILENAME, LINE)
+
 #endif // XAN_DEBUG_MODE
 #endif // XAN_DEBUG

@@ -1,0 +1,24 @@
+# ninja log v5
+285	379	6923331025270652	XanDebug2.exe	4d3761b6f7efecce
+4	297	6923332943891258	CMakeFiles/XanDebug.dir/Malloc_list.cpp.obj	a41113ff92a89fb6
+0	299	6923332943911273	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+300	398	6923332944871466	XanDebug.exe	72533025dcdb04cd
+4	599	6923404747283332	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+600	900	6923404750462245	XanDebug.exe	72533025dcdb04cd
+2	301	6923405873509442	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+301	421	6923405874639699	XanDebug.exe	72533025dcdb04cd
+3	291	6923406118964882	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+292	395	6923406119975112	XanDebug.exe	72533025dcdb04cd
+4	345	6923406665593888	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+346	443	6923406666534215	XanDebug.exe	72533025dcdb04cd
+3	284	6923407861572593	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+285	385	6923407862542660	XanDebug.exe	72533025dcdb04cd
+3	297	6923409668904455	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+7	293	6923410400862346	CMakeFiles/XanDebug.dir/Malloc_list.cpp.obj	a41113ff92a89fb6
+2	303	6923410400962348	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+303	398	6923410401882553	XanDebug.exe	72533025dcdb04cd
+7	329	6923497711515244	CMakeFiles/XanDebug.dir/Malloc_list.cpp.obj	a41113ff92a89fb6
+2	332	6923497711545257	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+332	471	6923497712895632	XanDebug.exe	72533025dcdb04cd
+3	309	6923498095575318	CMakeFiles/XanDebug.dir/main.cpp.obj	92f670ab319cb82f
+310	412	6923498096575547	XanDebug.exe	72533025dcdb04cd

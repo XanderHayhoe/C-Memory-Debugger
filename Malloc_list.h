@@ -12,14 +12,14 @@ public:
     int memory_new_size;
     int memory_delete_size;
     int line;
-    std::string file;
+    char * file;
     Node* next;
     Node() {
         this->memory_delete_size = 0;
         this->memory_new_size = 0;
         this->memory_free_size = 0;
         this->memory_malloc_size = 0;
-        this->file = " ";
+        this->file = 0;
         this->line = 0;
         this->next = nullptr;
     }
@@ -39,9 +39,17 @@ public:
     Malloc_list() {
         head = NULL;
     }
+    ~Malloc_list() {
+        Node *curr = head;
+        while(curr != nullptr) {
+            Node* temp = curr;
+            curr = curr->next;
+            delete temp;
+        }
+    }
     void malloc_list_append(int size,
                             int line,
-                            std::string file,
+                            char * file,
                             bool malloc
     );
 };

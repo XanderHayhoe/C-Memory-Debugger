@@ -6,7 +6,7 @@
 
 void Malloc_list::malloc_list_append(int size,
                                      int line,
-                                     std::string file,
+                                     char * file,
                                      bool malloc
 ) {
     Node *new_node = new Node();

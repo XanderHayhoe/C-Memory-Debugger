@@ -1,0 +1,3 @@
+C:/Users/xande/CLionProjects/XanDebug/cmake-build-debug/CMakeFiles/XanDebug.dir
+C:/Users/xande/CLionProjects/XanDebug/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/xande/CLionProjects/XanDebug/cmake-build-debug/CMakeFiles/rebuild_cache.dir
