@@ -59,7 +59,7 @@ void printDebug(Node *head,
         while(temp != nullptr) {
             printf("%d-th memory modification:\n", counter);
             printf("data alloc'd via malloc: %d\n", temp->getMemoryMallocSize());
-            printf("data dealloc'd via free'd: %d\n", temp->getMemoryFreeSize());
+            printf("data dealloc'd via free: %d\n", temp->getMemoryFreeSize());
             printf("data alloc'd via new: %d\n", temp->getMemoryNewSize());
             printf("data dealloc'd via delete: %d\n", temp->getMemoryDeleteSize());
             printf("source: %s, line: %d\n", temp->file, temp->getLine());
